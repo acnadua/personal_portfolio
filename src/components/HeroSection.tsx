@@ -1,23 +1,20 @@
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
-import profileLight from "/images/profileLight.jpg";
-import profileDark from "/images/profileDark.jpg";
 
-export const HeroSection = () => {
-  const [profileImage, setProfileImage] = useState(profileLight);
+export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
+  const [profileImage, setProfileImage] = useState("");
 
   useEffect(() => {
-    const storedImage = localStorage.getItem("image")!;
-
-    setProfileImage(storedImage);
-  }, []);
+    if (isDarkMode) setProfileImage("/images/profileDark.jpg");
+    else setProfileImage("/images/profileLight.jpg");
+  }, [isDarkMode]);
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="flex flex-row">
+        <div className="flex flex-row space-x-3">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
               <span className="opacity-0 animate-fade-in"> Hi, I'm </span>
