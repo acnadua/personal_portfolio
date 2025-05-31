@@ -1,5 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { cn } from "../lib/utils";
 
 export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [profileImage, setProfileImage] = useState("");
@@ -18,10 +19,20 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-20">
               <span className="opacity-0 animate-fade-in"> Hi, I'm </span>
-              <span className="text-primary opacity-0 animate-fade-in-delay-1">
+              <span
+                className={cn(
+                  "opacity-0 animate-fade-in-delay-1",
+                  isDarkMode ? "text-glow" : "text-primary"
+                )}
+              >
                 Abigail
               </span>
-              <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+              <span
+                className={cn(
+                  "ml-2 opacity-0 animate-fade-in-delay-2",
+                  isDarkMode ? "text-glow" : "text-primary"
+                )}
+              >
                 Nadua
               </span>
             </h1>

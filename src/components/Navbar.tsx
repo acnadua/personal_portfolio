@@ -34,12 +34,12 @@ export const Navbar = () => {
     >
       <div className="container flex items-center justify-between">
         <a
-          className="text-xl font-bold text-primary flex items-center"
+          className="text-xl font-bold flex items-center text-foreground"
           href="#hero"
         >
           <span className="relative z-10">
-            <span className="text-glow text-foreground">Abigail's </span>
-            Portfolio
+            <span className="text-primary">Abigail </span>
+            Nadua
           </span>
         </a>
 
