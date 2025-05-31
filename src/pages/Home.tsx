@@ -5,7 +5,7 @@ import { HeroSection } from "../components/HeroSection";
 import { Navbar } from "../components/Navbar";
 import { ProjectsSection } from "../components/ProjectsSection";
 import { SkillsSection } from "../components/SkillsSection";
-import { StarBackground } from "../components/StarBackground";
+import { Background } from "../components/Background";
 import { ThemeToggle } from "../components/ThemeToggle";
 
 export const Home = () => {
@@ -24,6 +24,9 @@ export const Home = () => {
   }, []);
 
   const toggleTheme = () => {
+    const overlay = document.getElementById("toggle-mode")!;
+    overlay.classList.add("animate-fade");
+
     if (isDarkMode) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
@@ -33,17 +36,21 @@ export const Home = () => {
       localStorage.setItem("theme", "dark");
       setIsDarkMode(true);
     }
+
+    setTimeout(() => {
+      overlay.classList.remove("animate-fade");
+    }, 1000);
   };
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <ThemeToggle toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
 
-      <StarBackground />
+      <Background isDarkMode={isDarkMode} />
 
       <Navbar />
 
-      <main>
+      <main id="toggle-mode">
         <HeroSection isDarkMode={isDarkMode} />
 
         <AboutSection />

@@ -14,9 +14,9 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="flex flex-row space-x-3">
+        <div className="flex flex-row">
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-20">
               <span className="opacity-0 animate-fade-in"> Hi, I'm </span>
               <span className="text-primary opacity-0 animate-fade-in-delay-1">
                 Abigail
@@ -32,13 +32,13 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
             </p>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-              <a href="#projects" className="cosmic-button">
+              <a href="#projects" className="cta">
                 View My Work
               </a>
             </div>
           </div>
 
-          <div className="pl-10">
+          <div className="pl-10 opacity-0 animate-fade-in-delay-4">
             <div>
               <div>
                 <img src={profileImage} className="max-h-100 max-w-100 " />

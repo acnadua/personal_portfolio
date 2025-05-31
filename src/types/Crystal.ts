@@ -1,8 +1,7 @@
-export interface Star {
+export interface Crystal {
   id: number;
   size: number;
   x: number;
   y: number;
-  opacity: number;
   animationDuration: number;
 }

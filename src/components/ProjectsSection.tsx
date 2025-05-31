@@ -154,7 +154,7 @@ export const ProjectsSection = () => {
           <a
             href="https://github.com/acnadua"
             target="_blank"
-            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            className="cta w-fit flex items-center mx-auto gap-2"
           >
             Check My GitHub <ArrowRight size={16} />
           </a>

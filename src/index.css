@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -11,13 +12,14 @@
   --color-card: hsl(var(--card));
 
   --animate-float: float 6s ease-in-out infinite;
-  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-fade: fade 1s ease-out;
+  --animate-shimmer: shimmer 10s infinite alternate;
+  --animate-glow: glow 8s infinite ease-in-out;
 
   @keyframes float {
     0%,
@@ -26,16 +28,6 @@
     }
     50% {
       transform: translateY(-10px);
-    }
-  }
-
-  @keyframes pulse-subtle {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.8;
     }
   }
 
@@ -50,17 +42,53 @@
     }
   }
 
-  @keyframes meteor {
+  @keyframes fade {
     0% {
-      transform: rotate(215deg) translateX(0);
-      opacity: 1;
+      opacity: 0;
     }
-    70% {
-      opacity: 1;
+    30% {
+      opacity: 0.3;
+    }
+    60% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 0.8;
     }
     100% {
-      transform: rotate(215deg) translateX(-500px);
-      opacity: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      opacity: 0.5;
+      transform: scaleX(0.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+
+  @keyframes glow {
+    0% {
+      transform: rotate(0deg) scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(173, 216, 230, 0.5);
+    }
+
+    50% {
+      transform: rotate(15deg) scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 30px rgba(173, 216, 230, 0.7);
+    }
+
+    100% {
+      transform: rotate(0deg) scale(1);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3),
+        0 0 20px rgba(173, 216, 230, 0.5);
     }
   }
 }
@@ -79,7 +107,7 @@
 
   .dark {
     --border: 217 33% 20%;
-    --background: 222 47% 4%;
+    --background: 214.29, 100%, 4.12%;
     --foreground: 213 31% 91%;
 
     --primary: 215.09, 100%, 33.53%;
@@ -99,6 +127,7 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Montserrat";
   }
 }
 
@@ -143,17 +172,26 @@
   border: 1px solid transparent;
 }
 
-@utility cosmic-button {
+@utility cta {
   @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95;
 }
-@utility star {
-  @apply absolute rounded-full bg-white;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+@utility crystal {
+  @apply absolute;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe, #ffffff);
+  border-radius: 10% 10% 30% 30%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 10px rgba(173, 216, 230, 0.5);
 }
 
-@utility meteor {
-  @apply absolute bg-linear-to-r from-transparent via-white to-white rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+@utility shimmer {
+  @apply absolute top-0 left-0 overflow-hidden;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.2) 1%,
+    transparent 60%
+  );
 }
 
 #root {
