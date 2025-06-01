@@ -22,7 +22,7 @@ const projects: Project[] = [
       "Tailwind CSS",
       "TypeScript",
     ],
-    url: "#",
+    url: "/",
     githubUrl: "https://github.com/acnadua/personal_portfolio",
   },
   {
@@ -47,7 +47,7 @@ const projects: Project[] = [
       "A mobile application for recording sounds and location, and tracking the user's motion intensity given their environment.",
     image: "/projects/ambience.png",
     tags: ["Flutter", "Dart", "Firebase"],
-    url: "#",
+    url: "#ambience-logger",
     githubUrl: "https://github.com/acnadua/ambience_logger",
   },
   {
@@ -57,7 +57,7 @@ const projects: Project[] = [
       "A mobile application for tracking a user's mood, share it with their friends, and be updated with their friends' moods.",
     image: "/projects/mood.png",
     tags: ["Flutter", "Dart", "Firebase"],
-    url: "#",
+    url: "#mood-tracker",
     githubUrl: "https://github.com/acnadua/mood_tracker",
   },
   {
@@ -67,7 +67,7 @@ const projects: Project[] = [
       "A mobile application for tracking a user's expenses, and be more mindful of their spending.",
     image: "/projects/expense.png",
     tags: ["Flutter", "Dart", "Firebase"],
-    url: "#",
+    url: "#expense-tracker",
     githubUrl: "https://github.com/acnadua/expense_tracker",
   },
 
@@ -78,6 +78,7 @@ const projects: Project[] = [
       "Windows desktop application for a LOLCode Programming Language Interpreter, incorporating advanced lexical and syntax analyzers for reliable command parsing.",
     image: "/projects/lolcode.png",
     tags: ["C#", ".NET"],
+    url: "#lolcode",
     githubUrl: "https://github.com/acnadua/lolcode_interpreter",
   },
 ];
