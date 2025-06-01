@@ -14,10 +14,10 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
-      <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="flex flex-row">
+      <div className="container max-w-4xl mx-auto text-center z-10 mt-15 sm:mt-0">
+        <div className="lg:flex lg:flex-row">
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-20">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-12 sm:leading-20">
               <span className="opacity-0 animate-fade-in"> Hi, I'm </span>
               <span
                 className={cn(
@@ -49,12 +49,16 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
             </div>
           </div>
 
-          <div className="pl-10 opacity-0 animate-fade-in-delay-4">
-            <div>
-              <div>
-                <img src={profileImage} className="max-h-100 max-w-100 " />
-              </div>
-            </div>
+          <div className="flex items-center justify-center opacity-0 animate-fade-in-delay-4 mt-10 lg:mt-0">
+            <img
+              src={profileImage}
+              className={cn(
+                "max-h-70 max-w-70 lg:max-h-100 lg:max-w-100 lg:ml-20 ml-0 rounded-full",
+                isDarkMode
+                  ? "shadow-[0_0_40px_rgba(0,71,171,0.8)]"
+                  : "shadow-[0_0_40px_rgba(255,105,180,0.8)]"
+              )}
+            />
           </div>
         </div>
       </div>
