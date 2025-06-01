@@ -10,6 +10,8 @@ const navItems: NavItem[] = [
   { name: "Contact", href: "#contact" },
 ];
 
+const path: string = window.location.pathname;
+
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +36,7 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between">
         <a
           className="text-xl font-bold flex items-center text-foreground"
-          href="#hero"
+          href={path === "/" ? "#hero" : "/"}
         >
           <span className="relative z-10">
             <span className="text-primary">Abigail </span>
@@ -47,7 +49,7 @@ export const Navbar = () => {
           {navItems.map((item, key) => (
             <a
               key={key}
-              href={item.href}
+              href={path === "/" ? item.href : `/${item.href}`}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
             >
               {item.name}
@@ -77,7 +79,7 @@ export const Navbar = () => {
             {navItems.map((item, key) => (
               <a
                 key={key}
-                href={item.href}
+                href={path === "/" ? item.href : `/${item.href}`}
                 className="text-foreground/80 hover:text-primary transition-colors duration-300"
                 onClick={() => setIsMenuOpen(false)}
               >

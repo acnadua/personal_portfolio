@@ -1,3 +1,9 @@
+import { CliquestSection } from "./projects/Cliquest";
+
 export const Projects = () => {
-  return <>Projects</>;
+  return (
+    <>
+      <CliquestSection />
+    </>
+  );
 };
