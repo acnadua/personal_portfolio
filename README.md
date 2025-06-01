@@ -4,7 +4,7 @@ Get to know me through this website! It also includes a list of my skills and so
 
 ### Disclaimer:
 
-I am NOT a UI designer, I could only implement what's already given so creating this web page by myself is challenging. Therefore, I watched and followed a tutorial from PedroTech, whose tutorial is linked below! I used for inspiration and to get my web page creation process started because I could not, for the love of me, think of a theme that suits me best.
+I am NOT a UI designer, I could only implement what's already given so creating this web page by myself is challenging. Therefore, I watched and followed a tutorial from PedroTech, whose tutorial is linked below! I used it for inspiration and to get my web page creation process started because I could not, for the love of me, think of a theme that suits me best.
 
 ### Reference:
 

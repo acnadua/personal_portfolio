@@ -4,6 +4,7 @@ export interface Project {
   description: string;
   image: string;
   tags: string[];
-  url: string | undefined;
-  githubUrl: string | undefined;
+  url?: string;
+  githubUrl?: string;
+  downloadName?: string;
 }

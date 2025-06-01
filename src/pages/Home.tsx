@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import { AboutSection } from "../components/AboutSection";
-import { ContactSection } from "../components/ContactSection";
-import { HeroSection } from "../components/HeroSection";
 import { Navbar } from "../components/Navbar";
-import { ProjectsSection } from "../components/ProjectsSection";
-import { SkillsSection } from "../components/SkillsSection";
-import { Background } from "../components/Background";
+import { Background } from "../components/home/Background";
 import { ThemeToggle } from "../components/ThemeToggle";
+import { Main } from "../components/home/Main";
+import { Projects } from "../components/Projects";
 
-export const Home = () => {
+export const Home = ({ isMain }: { isMain: boolean }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -51,15 +48,7 @@ export const Home = () => {
       <Navbar />
 
       <main id="toggle-mode">
-        <HeroSection isDarkMode={isDarkMode} />
-
-        <AboutSection />
-
-        <SkillsSection />
-
-        <ProjectsSection />
-
-        <ContactSection />
+        {isMain ? <Main isDarkMode={isDarkMode} /> : <Projects />}
       </main>
     </div>
   );
