@@ -39,7 +39,7 @@ export const Navbar = () => {
           href={path === "/" ? "#hero" : "/"}
         >
           <span className="relative z-10">
-            <span className="text-primary">Abigail </span>
+            <span className="text-primary text-glow">Abigail </span>
             Nadua
           </span>
         </a>

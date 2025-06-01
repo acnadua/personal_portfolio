@@ -17,11 +17,7 @@ const projects: Project[] = [
     description:
       "A web application for showcasing my personal projects and to share a little bit about myself.",
     image: "/projects/portfolio.gif",
-    tags: [
-      "React",
-      "Tailwind CSS",
-      "TypeScript",
-    ],
+    tags: ["React", "Tailwind CSS", "TypeScript"],
     url: "/",
     githubUrl: "https://github.com/acnadua/personal_portfolio",
   },

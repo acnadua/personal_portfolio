@@ -17,7 +17,7 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
       <div className="container max-w-4xl mx-auto text-center z-10 mt-15 sm:mt-0">
         <div className="lg:flex lg:flex-row">
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-12 sm:leading-20">
+            <h1 className="text-4xl md:text-6xl font-bold leading-12 sm:leading-20">
               <span className="opacity-0 animate-fade-in"> Hi, I'm </span>
               <span
                 className={cn(

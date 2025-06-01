@@ -45,7 +45,11 @@ export const ProjectsSection = () => {
 
                   <div className="flex space-x-3 justify-center">
                     <a
-                      href={`/projects${project.url}`}
+                      href={
+                        project.url[0] === "#"
+                          ? `/projects${project.url}`
+                          : project.url
+                      }
                       download={project.downloadName}
                       className={cn(
                         "text-foreground/80 hover:text-primary transition-colors duration-300",
