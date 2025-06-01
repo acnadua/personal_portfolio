@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "../components/Navbar";
-import { Background } from "../components/home/Background";
+import { Background } from "../components/main/Background";
 import { ThemeToggle } from "../components/ThemeToggle";
-import { Main } from "../components/home/Main";
+import { Main } from "../components/Main";
 import { Projects } from "../components/Projects";
 
 export const Home = ({ isMain }: { isMain: boolean }) => {

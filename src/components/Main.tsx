@@ -1,7 +1,7 @@
-import { AboutSection } from "./AboutSection";
-import { ContactSection } from "./ContactSection";
-import { HeroSection } from "./HeroSection";
-import { ProjectsSection } from "./ProjectsSection";
+import { AboutSection } from "./main/AboutSection";
+import { ContactSection } from "./main/ContactSection";
+import { HeroSection } from "./main/HeroSection";
+import { ProjectsSection } from "./main/ProjectsSection";
 
 export const Main = ({ isDarkMode }: { isDarkMode: boolean }) => {
   return (
