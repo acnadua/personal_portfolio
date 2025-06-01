@@ -4,7 +4,7 @@ export const ExpenseTrackerSection = () => {
       id="expense-tracker"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
-      Expense Tracker
+      Expense Tracker: To follow
     </section>
   );
 };

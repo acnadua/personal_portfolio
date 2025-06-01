@@ -4,7 +4,7 @@ export const AmbienceLoggerSection = () => {
       id="ambience-logger"
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
-      Ambience Logger
+      Ambience Logger: To follow
     </section>
   );
 };

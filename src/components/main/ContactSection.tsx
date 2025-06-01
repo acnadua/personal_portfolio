@@ -1,31 +1,63 @@
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { cn } from "../../lib/utils";
-import { useState, type FormEvent } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
+import { send } from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
-export const ContactSection = () => {
+export const ContactSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
+    send(
+      "service_x0xt5c8", // Replace with your EmailJS service ID
+      "template_kjzti6i", // Replace with your EmailJS template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      "ViZeFuuMETUgK9cqV" // Replace with your EmailJS user ID
+    ).then(
+      () => {
+        toast.success("Message sent successfully!", {
+          autoClose: 2000,
+          closeOnClick: true,
+          theme: isDarkMode ? "dark" : "light",
+        });
+      },
+      (error) => {
+        console.error("Failed to send message:", error);
+        toast.error("Failed to send message. Please try again later.", {
+          autoClose: 2000,
+          closeOnClick: true,
+          theme: isDarkMode ? "dark" : "light",
+        });
+      }
+    );
+
     setTimeout(() => {
-      console.log("Message sent!");
       setIsSubmitting(false);
-    }, 3000);
+      setFormData({ name: "", email: "", message: "" });
+    }, 1500);
   };
 
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+      <ToastContainer />
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary">Touch</span>
@@ -48,6 +80,7 @@ export const ContactSection = () => {
                   <h4 className="font-semibold text-start">Email</h4>
                   <a
                     href="mailto:abinadua07@gmail.com"
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     abinadua07@gmail.com
@@ -62,6 +95,7 @@ export const ContactSection = () => {
                   <h4 className="font-semibold text-start">Phone</h4>
                   <a
                     href="tel:+639765647683"
+                    target="_blank"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     (+63) 976 564 7683
@@ -83,13 +117,13 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/abigail-nadua/"
+                  target="_blank"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Facebook />
-                </a>
-                <a href="#" target="_blank">
+                <a href="https://www.instagram.com/abiiinadua/" target="_blank">
                   <Instagram />
                 </a>
               </div>
@@ -100,7 +134,7 @@ export const ContactSection = () => {
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-            <form className="space-y-6">
+            <form id="form" className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -113,6 +147,8 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
+                  value={formData.name}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="John Doe"
                 />
@@ -129,6 +165,8 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="johndoe@example.com"
                 />
@@ -144,6 +182,8 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
+                  value={formData.message}
+                  onChange={handleChange}
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />

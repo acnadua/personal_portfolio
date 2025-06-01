@@ -12,7 +12,7 @@ export const Main = ({ isDarkMode }: { isDarkMode: boolean }) => {
 
       <ProjectsSection />
 
-      <ContactSection />
+      <ContactSection isDarkMode={isDarkMode} />
     </>
   );
 };
