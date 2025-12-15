@@ -12,17 +12,17 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Aspiring Software/Data Engineer
+              Data Engineer
             </h3>
 
             <p className="text-muted-foreground">
-              Creates accessible, reliable, and user-centered mobile
-              applications using Flutter with 2 years of experience.
+              Designs and builds end-to-end data pipelines for 
+              large-scale web data collection and processing.
             </p>
 
             <p className="text-muted-foreground">
-              Builds solutions and ideas based on analyzed data, constantly
-              learning and staying up-to-date with technological trends.
+              Enjoys turning complex, unreliable data sources into structured, 
+              usable datasets for downstream analytics and applications.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -38,7 +38,7 @@ export const AboutSection = () => {
                   "hover:bg-primary/10 transition-colors duration-300"
                 )}
               >
-                Download CV
+                Download Resume
               </a>
             </div>
           </div>
@@ -50,11 +50,11 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Mobile Development</h4>
+                  <h4 className="font-semibold text-lg">Data Collection & Automation</h4>
                   <p className="text-muted-foreground">
-                    Creating practical user-centered mobile applications with
-                    Flutter, utilizing modern technologies to deliver seamless
-                    solutions.
+                    Creating automated systems that continuously collect 
+                    and organize data from multiple sources, reducing 
+                    manual work and ensuring data stays up to date.
                   </p>
                 </div>
               </div>
@@ -67,12 +67,12 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">
-                    Data-driven Solutions
+                    Data Quality & Usability
                   </h4>
                   <p className="text-muted-foreground">
-                    Delivering seamless and scalable data solutions that empower
-                    clients to make data-driven decisions with confidence and
-                    speed.
+                    Turning raw, messy data into clean and consistent 
+                    datasets that teams can trust for analysis, 
+                    reporting, and decision-making.
                   </p>
                 </div>
               </div>
@@ -85,12 +85,12 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">
-                    Collaborator and Initiator
+                    Scalable & Reliable Systems
                   </h4>
                   <p className="text-muted-foreground">
-                    Proactive team player who excels at initiating projects,
-                    fostering collaborations, and driving innovative solutions
-                    to completion.
+                    Designing data systems that are resilient, scalable, 
+                    and built to handle growth and failure without 
+                    breaking existing workflows.
                   </p>
                 </div>
               </div>

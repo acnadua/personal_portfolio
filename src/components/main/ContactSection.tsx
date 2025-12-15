@@ -109,7 +109,7 @@ export const ContactSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
                 <div>
                   <h4 className="font-semibold text-start">Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Los Baños, Laguna, 4030
+                    Trece Martires City, Cavite, 4109
                   </a>
                 </div>
               </div>

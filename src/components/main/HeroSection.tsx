@@ -38,9 +38,9 @@ export const HeroSection = ({ isDarkMode }: { isDarkMode: boolean }) => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-              A computer science instructor stepping into data engineering and
-              mobile development, eager to transform ideas into impactful
-              products
+              A data engineer focused on designing and optimizing scalable ETL/ELT pipelines, 
+              automating data collection, and managing semi-structured data, 
+              with proven record of improving data processing efficiency and reliability.
             </p>
 
             <div className="pt-4 opacity-0 animate-fade-in-delay-4">

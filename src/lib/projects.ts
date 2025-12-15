@@ -2,7 +2,24 @@ import type { Project } from "../types/Project";
 
 const projects: Project[] = [
   {
-    id: 1,
+    title: "End-to-End Reddit Data Pipeline with LLM Analysis",
+    description:
+      "Sentiment Analysis Project Redesigned: A data pipeline for collecting data from Reddit via web automation, processing data with PySpark, storing raw data in a PostgreSQL database, and then using the data for sentiment analysis.",
+    image: "/projects/reddit.png",
+    tags: ["Python", "PySpark", "PostgreSQL", "LLM", "Web Automation", "Playwright"],
+    url: "#reddit",
+    githubUrl: "https://github.com/acnadua/Reddit-Data-Sentiment-Analysis",
+  },
+  {
+    title: "NASA Near-Earth Object (NEO) ETL Pipeline",
+    description:
+      "An ETL pipeline for collecting data from the NASA API, processing data with PySpark, storing raw data in AWS S3 and the processed data in PostgreSQL.",
+    image: "/projects/neo.png",
+    tags: ["Python", "PySpark", "PostgreSQL", "AWS S3", "NASA API"],
+    url: "#neo",
+    githubUrl: "https://github.com/acnadua/NASA-NeoWs-Pipeline",
+  },
+  {
     title: "Cliquest: A Travel Planning Mobile Application",
     description:
       "Full-stack mobile application for helping solo travelers and small groups find each other, form cliques, and travel with similar people.",
@@ -12,7 +29,6 @@ const projects: Project[] = [
     githubUrl: "https://github.com/acnadua/cliquest_travel_app",
   },
   {
-    id: 2,
     title: "Personal Portfolio",
     description:
       "A web application for showcasing my personal projects and to share a little bit about myself.",
@@ -22,11 +38,10 @@ const projects: Project[] = [
     githubUrl: "https://github.com/acnadua/personal_portfolio",
   },
   {
-    id: 3,
     title: "Sentiment Analysis of Tweets",
     description:
       "A system for collecting, preprocessing, analyzing, and categorizing Philippine election tweets using deep learning models such as CNN and Bi-LSTM, with an integrated attention mechanism.",
-    image: "/projects/sentiment.png",
+    image: "/projects/sp.png",
     tags: [
       "Artificial Intelligence",
       "Tensorflow",
@@ -37,38 +52,6 @@ const projects: Project[] = [
     downloadName: "Nadua_SP.pdf"
   },
   {
-    id: 4,
-    title: "Ambience Logger",
-    description:
-      "A mobile application for recording sounds and location, and tracking the user's motion intensity given their environment.",
-    image: "/projects/ambience.png",
-    tags: ["Flutter", "Dart", "Firebase"],
-    url: "#ambience-logger",
-    githubUrl: "https://github.com/acnadua/ambience_logger",
-  },
-  {
-    id: 5,
-    title: "Mood Tracker",
-    description:
-      "A mobile application for tracking a user's mood, share it with their friends, and be updated with their friends' moods.",
-    image: "/projects/mood.png",
-    tags: ["Flutter", "Dart", "Firebase"],
-    url: "#mood-tracker",
-    githubUrl: "https://github.com/acnadua/mood_tracker",
-  },
-  {
-    id: 6,
-    title: "Expense Tracker",
-    description:
-      "A mobile application for tracking a user's expenses, and be more mindful of their spending.",
-    image: "/projects/expense.png",
-    tags: ["Flutter", "Dart", "Firebase"],
-    url: "#expense-tracker",
-    githubUrl: "https://github.com/acnadua/expense_tracker",
-  },
-
-  {
-    id: 7,
     title: "LOLCode Interpreter",
     description:
       "Windows desktop application for a LOLCode Programming Language Interpreter, incorporating advanced lexical and syntax analyzers for reliable command parsing.",
