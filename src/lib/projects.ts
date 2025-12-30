@@ -6,7 +6,7 @@ const projects: Project[] = [
     description:
       "Sentiment Analysis Project Redesigned: A data pipeline for collecting data from Reddit via web automation, processing data with PySpark, storing raw data in a PostgreSQL database, and then using the data for sentiment analysis.",
     image: "/projects/reddit.png",
-    tags: ["Python", "PySpark", "PostgreSQL", "LLM", "Web Automation", "Playwright"],
+    tags: ["Python", "PySpark", "PostgreSQL", "LLM", "Web Scraping", "Playwright"],
     url: "#reddit",
     githubUrl: "https://github.com/acnadua/Reddit-Data-Sentiment-Analysis",
   },
@@ -18,6 +18,15 @@ const projects: Project[] = [
     tags: ["Python", "PySpark", "PostgreSQL", "AWS S3", "NASA API"],
     url: "#neo",
     githubUrl: "https://github.com/acnadua/NASA-NeoWs-Pipeline",
+  },
+  {
+    title: "Kalibrr Job Listings Web Scraper",
+    description:
+      "A web scraper for collecting job listings from Kalibrr, a public job board, using Python and Playwright, storing collected data in MongoDB and saving them into CSV files.",
+    image: "/projects/kalibrr.png",
+    tags: ["Python", "Web Scraping", "Playwright", "MongoDB", "pandas"],
+    url: "#kalibrr",
+    githubUrl: "https://github.com/acnadua/kalibrr-job-listings-scraper",
   },
   {
     title: "Cliquest: A Travel Planning Mobile Application",
